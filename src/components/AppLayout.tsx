@@ -18,8 +18,8 @@ function AppLayout() {
                     color: '#ffffff',
                 }}
             >
-                <span className="text-2xl font-bold"> Support Ticket </span>
-                <Menu className="ml-auto" theme="dark" mode="horizontal" defaultSelectedKeys={['t']} items={menuItems} style={{ background: 'transparent' }}/>
+                <span className="text-2xl font-bold mr-3"> Support Ticket</span>
+                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['t']} items={menuItems} style={{ backgroundColor: '#0958d9' }}/>
             </Header>
 
             <Content className="bg-[#f0f5ff] px-12 py-10" style={{ flex: 1 }}>
