@@ -1,8 +1,9 @@
-import AppLayout from './components/AppLayout'
+import AppRoutes from './routes/Routes'
+
 
 function App() {
     return (
-        <AppLayout />
+        <AppRoutes />
     )
 }
 

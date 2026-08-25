@@ -1,10 +1,11 @@
 import { Layout, Menu } from 'antd'
 import type { MenuProps } from 'antd'
 const { Header, Content, Footer } = Layout
+import { Link, Outlet } from 'react-router-dom'
 
 const menuItems: MenuProps['items'] = [
-    {key: 'tickets', label: 'Tickets',},
-    {key: 'create-ticket', label: 'Create Ticket',},
+    {key: 't', label: <Link to="/">Tickets</Link>,},
+    {key: 'c', label: <Link to="/tickets/create">Create Ticket</Link>,},
 ]
 
 function AppLayout() {
@@ -17,12 +18,12 @@ function AppLayout() {
                     color: '#ffffff',
                 }}
             >
-                <span className="text-2xl font-bold"> Support Ticket </span>
-                <Menu className="ml-auto" theme="dark" mode="horizontal" defaultSelectedKeys={['tickets']} items={menuItems} style={{ background: 'transparent' }}/>
+                <span className="text-2xl font-bold mr-3"> Support Ticket</span>
+                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['t']} items={menuItems} style={{ backgroundColor: '#0958d9' }}/>
             </Header>
 
             <Content className="bg-[#f0f5ff] px-12 py-10" style={{ flex: 1 }}>
-                <h1 className="text-3xl font-bold text-slate-900"> Support Ticket </h1>
+                <Outlet />
             </Content>
 
             <Footer className="text-center"
