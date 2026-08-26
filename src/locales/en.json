@@ -1,0 +1,37 @@
+{
+  "navigation": {
+    "tickets": "Tickets",
+    "createTicket": "Create Ticket"
+  },
+  "tickets": {
+    "listTitle": "Ticket List",
+    "details": "Details",
+    "edit": "Edit",
+    "detailsTitle": "Ticket Details",
+    "id": "Ticket ID",
+    "back": "Back to Tickets",
+    "notFound": "Ticket not found"
+  },
+  "app": {
+    "name": "Support Ticket",
+    "footer": "Support Ticket System"
+  },
+  "form": {
+    "create": "Create Ticket",
+    "update": "Update Ticket",
+    "title": "Title",
+    "description": "Description",
+    "priority": "Priority",
+    "status": "Status"
+  },
+  "priority": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High"
+  },
+  "status": {
+    "open": "Open",
+    "inProgress": "In Progress",
+    "closed": "Closed"
+  }
+}

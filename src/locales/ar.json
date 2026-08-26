@@ -1,0 +1,37 @@
+{
+  "navigation": {
+    "tickets": "التذاكر",
+    "createTicket": "إنشاء تذكرة"
+  },
+  "tickets": {
+    "listTitle": "قائمة التذاكر",
+    "details": "التفاصيل",
+    "edit": "تعديل",
+    "detailsTitle": "تفاصيل التذكرة",
+    "id": "رقم التذكرة",
+    "back": "العودة إلى التذاكر",
+    "notFound": "التذكرة غير موجودة"
+  },
+  "app": {
+    "name": "نظام التذاكر",
+    "footer": "نظام دعم التذاكر"
+  },
+  "form": {
+    "create": "إنشاء تذكرة",
+    "update": "تحديث التذكرة",
+    "title": "العنوان",
+    "description": "الوصف",
+    "priority": "الأولوية",
+    "status": "الحالة"
+  },
+  "priority": {
+    "low": "منخفضة",
+    "medium": "متوسطة",
+    "high": "عالية"
+  },
+  "status": {
+    "open": "مفتوحة",
+    "inProgress": "قيد التنفيذ",
+    "closed": "مغلقة"
+  }
+}
