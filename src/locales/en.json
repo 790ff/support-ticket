@@ -10,11 +10,18 @@
     "detailsTitle": "Ticket Details",
     "id": "Ticket ID",
     "back": "Back to Tickets",
-    "notFound": "Ticket not found"
+    "notFound": "Ticket not found",
+    "allStatuses": "All statuses",
+    "empty": "No tickets found"
   },
   "app": {
     "name": "Support Ticket",
     "footer": "Support Ticket System"
+  },
+  "feedback": {
+    "created": "Ticket created",
+    "updated": "Ticket updated",
+    "statusUpdated": "Status updated"
   },
   "form": {
     "create": "Create Ticket",
@@ -33,5 +40,11 @@
     "open": "Open",
     "inProgress": "In Progress",
     "closed": "Closed"
+  },
+  "validation": {
+    "titleRequired": "Please enter a title",
+    "descriptionRequired": "Please enter a description",
+    "priorityRequired": "Please select a priority",
+    "statusRequired": "Please select a status"
   }
 }

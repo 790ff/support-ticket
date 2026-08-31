@@ -1,10 +1,5 @@
-export type Ticket = {
-    id: number
-    title: string
-    description: string
-    status: 'Open' | 'In Progress' | 'Closed'
-    priority: 'Low' | 'Medium' | 'High'
-}
+import type { Ticket } from '../types/ticket'
+
 export const tickets: Ticket[] = [    {
         id: 1,
         title: 'Unable to login',

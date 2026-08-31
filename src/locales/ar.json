@@ -10,7 +10,14 @@
     "detailsTitle": "تفاصيل التذكرة",
     "id": "رقم التذكرة",
     "back": "العودة إلى التذاكر",
-    "notFound": "التذكرة غير موجودة"
+    "notFound": "التذكرة غير موجودة",
+    "allStatuses": "كل الحالات",
+    "empty": "لا توجد تذاكر"
+  },
+  "feedback": {
+    "created": "تم إنشاء التذكرة",
+    "updated": "تم تحديث التذكرة",
+    "statusUpdated": "تم تحديث الحالة"
   },
   "app": {
     "name": "نظام التذاكر",
@@ -33,5 +40,11 @@
     "open": "مفتوحة",
     "inProgress": "قيد التنفيذ",
     "closed": "مغلقة"
+  },
+  "validation": {
+    "titleRequired": "اكتب عنوانًا للتذكرة",
+    "descriptionRequired": "اكتب وصفًا للمشكلة",
+    "priorityRequired": "اختر أولوية للتذكرة",
+    "statusRequired": "اختر حالة للتذكرة"
   }
 }

@@ -1,14 +1,13 @@
-import { Button, Form, Input, Select } from 'antd'
-import { useParams } from 'react-router-dom'
-import { tickets } from '../data/tickets'
+import { Button, Form, Input, Select, message } from 'antd'
+import { useNavigate, useParams } from 'react-router-dom'
+import { ticketService } from '../services/ticketService'
 import { useTranslation } from 'react-i18next'
 function EditTicketPage() {
     const { ticketId } = useParams()
     const { t } = useTranslation()
+    const navigate = useNavigate()
 
-    const ticket = tickets.find(
-        (ticket) => ticket.id === Number(ticketId)
-    )
+    const ticket = ticketService.getById(Number(ticketId))
     if (!ticket) {
         return <p>{t('tickets.notFound')}</p>
     }
@@ -17,21 +16,20 @@ function EditTicketPage() {
         <div>
             <h1 className="text-3xl font-bold">{t('form.update')}</h1>
 
-            <Form style={{ margin: '20px 0'}} layout="vertical" initialValues={ticket} onFinish={(values) =>
-                    console.log({
-                        id: ticketId,
-                        values,
-                    })}
-            >
-                <Form.Item label={t('form.title')} name="title">
+            <Form style={{ margin: '20px 0'}} layout="vertical" initialValues={ticket} onFinish={(values) => {
+                ticketService.update(ticket.id, values)
+                message.success(t('feedback.updated'))
+                navigate('/')
+            }}>
+                <Form.Item label={t('form.title')} name="title" rules={[{ required: true, message: t('validation.titleRequired'),}]}>
                     <Input />
                 </Form.Item>
 
-                <Form.Item label={t('form.description')} name="description">
+                <Form.Item label={t('form.description')} name="description" rules={[{ required: true, message: t('validation.descriptionRequired'),}]}>
                     <Input />
                 </Form.Item>
 
-                <Form.Item label={t('form.priority')} name="priority">
+                <Form.Item label={t('form.priority')} name="priority" rules={[{ required: true, message: t('validation.priorityRequired'),}]}>
                     <Select options={[
                             { value: 'Low', label: t('priority.low') },
                             { value: 'Medium', label: t('priority.medium') },
@@ -40,7 +38,7 @@ function EditTicketPage() {
                     />
                 </Form.Item>
 
-                <Form.Item label={t('form.status')} name="status">
+                <Form.Item label={t('form.status')} name="status" rules={[{ required: true, message: t('validation.statusRequired'),}]}>
                     <Select options={[
                             { value: 'Open', label: t('status.open') },
                             { value: 'In Progress', label: t('status.inProgress') },
